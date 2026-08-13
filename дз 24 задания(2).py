@@ -10,8 +10,9 @@ print(len(max(matches,key = len)))
 from re import finditer
 with open(r"task-24\24_17685.txt") as f:
     data = f.readline()
-number = r"([1-9][0-9]+)|0"
-pattern = rf"({number}[-*])+{number}"
+number = r"([1-9][0-9]+)|0)"
+zero = rf"({number}\*)*0(\*{number})*"
+pattern = rf"({zero}\+)*{zero}"
 matches = [match.group() for match in finditer(pattern,data)]
 print(len(max(matches,key=len)))
 #17641
