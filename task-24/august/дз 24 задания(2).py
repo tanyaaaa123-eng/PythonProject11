@@ -1,6 +1,6 @@
 #16388
 from re import finditer
-with open(r"task-24\24_16388.txt") as f:
+with open(r"24_16388.txt") as f:
     data = f.readline()
 pattern = r"(LM|M)N?(KLMN)+(KLM|KL|K)?"
 matches = [match.group() for match in finditer(pattern,data)]
@@ -8,7 +8,7 @@ print(len(max(matches,key = len)))
 # ответ 182
 #17685
 from re import finditer
-with open(r"task-24\24_17685.txt") as f:
+with open(r"24_17685.txt") as f:
     data = f.readline()
 number = r"([1-9][0-9]+)|0)"
 zero = rf"({number}\*)*0(\*{number})*"
@@ -17,7 +17,7 @@ matches = [match.group() for match in finditer(pattern,data)]
 print(len(max(matches,key=len)))
 #17641
 from re import finditer
-with open(r"task-24\24_17641.txt") as f:
+with open(r"24_17641.txt") as f:
     data = f.readline()
 number = r"([1-9][0-9]+)|0"
 pattern = rf"({number}[+*])+{number}"
