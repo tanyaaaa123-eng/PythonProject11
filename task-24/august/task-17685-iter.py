@@ -19,6 +19,10 @@ for match in matches:
                 new_match = match[l:r+1]
                 if eval(new_match)==0:
                     ans = max(ans,len(new_match))
+                elif len(line) > ans:
+                    for l in range(len(line)):
+                        for r in range(len(line)-1,l,-1)
+
 
 
 
